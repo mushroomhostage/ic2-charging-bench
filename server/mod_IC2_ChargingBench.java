@@ -1,7 +1,7 @@
 package net.minecraft.src;
 
-import forge.Configuration;
-import forge.Property;
+import net.minecraft.src.forge.Configuration;
+import net.minecraft.src.forge.Property;
 import ic2.api.Items;
 import ic2.platform.Platform;
 import ic2chargingbench.common.*;
