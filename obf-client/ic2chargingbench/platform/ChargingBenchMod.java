@@ -3,13 +3,13 @@
 // Decompiler options: packimports(3) 
 // Source File Name:   ChargingBenchMod.java
 
-package ic2chargingbench.platform;
+//package ic2chargingbench.platform;
 
 import forge.*;
 import ic2chargingbench.common.TileEntityChargingBench;
 import net.minecraft.client.Minecraft;
 
-import ic2chargingbench.platform;
+//import ic2chargingbench.platform;
 
 // Referenced classes of package ic2chargingbench.platform:
 //            GuiChargingBench
