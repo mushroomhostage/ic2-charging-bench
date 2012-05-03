@@ -137,7 +137,7 @@ public class TileEntityChargingBench extends TileEntityElecMachine
         return new ContainerChargingBench(playerinventory, this);
     }
 
-    public boolean emitsEnergyTo(TileEntity tileentity, Direction direction)
+    public boolean emitsEnergyTo(TileEntity tileentity, ic2.api.Direction direction)
     {
         return true;
     }
@@ -176,7 +176,7 @@ public class TileEntityChargingBench extends TileEntityElecMachine
         maxEnergy = k * 10000 + 4 * getMaxEnergyOutput();
     }
 
-    public int injectEnergy(Direction direction, int i)
+    public int injectEnergy(ic2.api.Direction direction, int i)
     {
         setOverclockRates();
         return super.injectEnergy(direction, i);
