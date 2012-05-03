@@ -21,13 +21,15 @@ public class mod_IC2_ChargingBench extends ChargingBenchMod {
    public static Block blockChargingBench;
    public static int guiIdChargingBench;
 
+   public static mod_IC2_ChargingBench instance;
+
 
    static {
       try {
          config = new Configuration(new File(Platform.getMinecraftDir() + "/config/IC2ChargingBench.cfg"));
          config.load();
-         idBlockChargingBench = Integer.valueOf(config.getOrCreateIntProperty("blockChargingBench", 1, 189).value).intValue();
-         guiIdChargingBench = Integer.valueOf(config.getOrCreateIntProperty("guiIdChargingBench", 0, 110).value).intValue();
+         idBlockChargingBench = Integer.valueOf(config.getOrCreateIntProperty("blockChargingBench", Configuration.CATEGORY_BLOCK, 189).value).intValue();
+         guiIdChargingBench = Integer.valueOf(config.getOrCreateIntProperty("guiIdChargingBench", Configuration.CATEGORY_GENERAL, 110).value).intValue();
          config.save();
       } catch (Exception var1) {
          System.out.println("[ChargingBench] Error while trying to access configuration!");
@@ -36,6 +38,8 @@ public class mod_IC2_ChargingBench extends ChargingBenchMod {
    }
 
    public void load() {
+      instance = this;
+
       blockChargingBench = new BlockChargingBench(idBlockChargingBench);
       ModLoader.registerBlock(blockChargingBench, ItemChargingBench.class);
       ModLoader.registerTileEntity(TileEntityChargingBench1.class, "Charging Bench Mk1");

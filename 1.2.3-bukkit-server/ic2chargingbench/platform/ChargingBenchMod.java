@@ -9,9 +9,4 @@ import net.minecraft.server.TileEntity;
 import net.minecraft.server.mod_IC2_ChargingBench;
 
 public abstract class ChargingBenchMod extends NetworkMod {
-
-   public static boolean launchGUI(EntityHuman entityhuman, TileEntity tileentity) {
-      ModLoader.openGUI(entityhuman, mod_IC2_ChargingBench.guiIdChargingBench, (IInventory)tileentity, ((TileEntityChargingBench)tileentity).getGuiContainer(entityhuman.inventory));
-      return true;
-   }
 }

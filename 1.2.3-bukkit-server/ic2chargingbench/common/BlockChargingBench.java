@@ -26,10 +26,10 @@ public class BlockChargingBench extends BlockMultiID
 
     public boolean interact(World world, int i, int j, int k, EntityHuman entityhuman)
     {
-        if(Platform.isSimulating())
-            return ChargingBenchMod.launchGUI(entityhuman, world.getTileEntity(i, j, k));
-        else
-            return true;
+        if(Platform.isSimulating()) {
+            entityhuman.openGui(mod_IC2_ChargingBench.instance, mod_IC2_ChargingBench.guiIdChargingBench, world, i, j, k);
+        }
+        return true;
     }
 
     public TileEntityBlock getBlockEntity(int i)
