@@ -3,23 +3,16 @@
 // Decompiler options: packimports(3) 
 // Source File Name:   ChargingBenchMod.java
 
-package ic2chargingbench.platform;
+//package ic2chargingbench.platform;
 
-import BaseModMp;
-import ModLoader;
-import ModLoaderMp;
-import forge.MinecraftForgeClient;
+import forge.*;
 import ic2chargingbench.common.TileEntityChargingBench;
-import kw;
-import mod_IC2_ChargingBench;
 import net.minecraft.client.Minecraft;
-import vp;
-import yw;
 
 // Referenced classes of package ic2chargingbench.platform:
 //            GuiChargingBench
 
-public abstract class ChargingBenchMod extends BaseModMp
+public abstract class ChargingBenchMod extends NetworkMod implements IGuiHandler
 {
 
     public ChargingBenchMod()
@@ -28,7 +21,11 @@ public abstract class ChargingBenchMod extends BaseModMp
         ModLoader.addLocalization("blockChargingBench2.name", "Charging Bench Mk2");
         ModLoader.addLocalization("blockChargingBench3.name", "Charging Bench Mk3");
         MinecraftForgeClient.preloadTexture("/ic2/sprites/ChargingBench.png");
-        ModLoaderMp.registerGUI(this, mod_IC2_ChargingBench.guiIdChargingBench);
+        MinecraftForge.setGuiHandler(this, this);
+    }
+
+    public Object getGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z)
+    {
     }
 
     public static boolean launchGUI(yw entityplayer, kw te)
