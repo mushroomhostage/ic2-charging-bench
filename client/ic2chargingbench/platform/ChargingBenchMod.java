@@ -24,7 +24,7 @@ public abstract class ChargingBenchMod extends NetworkMod implements IGuiHandler
         MinecraftForge.setGuiHandler(this, this);
     }
 
-    public Object getGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z)
+    public Object getGuiElement(int ID, yw player, xd world, int x, int y, int z)
     {
     }
 
