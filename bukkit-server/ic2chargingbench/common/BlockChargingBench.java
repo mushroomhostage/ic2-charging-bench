@@ -27,8 +27,6 @@ public class BlockChargingBench extends BlockMultiID
     {
         TileEntity tileentity = world.getTileEntity(i, j, k);
 
-        System.out.println("interact tileentity="+tileentity);
-
         if(tileentity == null || !(tileentity instanceof TileEntityChargingBench)) {
             return true;
         }

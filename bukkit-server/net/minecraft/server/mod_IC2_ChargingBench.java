@@ -27,7 +27,6 @@ public class mod_IC2_ChargingBench extends NetworkMod implements IGuiHandler {
          guiIdChargingBench = Integer.valueOf(config.getOrCreateIntProperty("guiIdChargingBench", Configuration.CATEGORY_GENERAL, 110).value).intValue();
          config.save();
       } catch (Exception var1) {
-         System.out.println("[ChargingBench] Error while trying to access configuration!");
          throw new RuntimeException(var1);
       }
    }
@@ -39,7 +38,6 @@ public class mod_IC2_ChargingBench extends NetworkMod implements IGuiHandler {
 */
    public Object getGuiElement(int ID, EntityHuman player, World world, int x, int y, int z) {
       TileEntity tileentity = world.getTileEntity(x, y, z);
-      System.out.println("getGuiElement te="+tileentity);
       if(tileentity != null && (tileentity instanceof TileEntityChargingBench)) {
          return new ContainerChargingBench(player, ((TileEntityChargingBench)tileentity));
       } else {
@@ -49,6 +47,8 @@ public class mod_IC2_ChargingBench extends NetworkMod implements IGuiHandler {
 
    public void load() {
       instance = this;
+
+      MinecraftForge.setGuiHandler(this, this);
 
       blockChargingBench = new BlockChargingBench(idBlockChargingBench);
       ModLoader.registerBlock(blockChargingBench, ItemChargingBench.class);
