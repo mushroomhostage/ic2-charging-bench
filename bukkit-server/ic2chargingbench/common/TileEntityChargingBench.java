@@ -132,10 +132,12 @@ public class TileEntityChargingBench extends TileEntityElecMachine
         return energy <= maxEnergy - baseMaxInput;
     }
 
+/*
     public Container getGuiContainer(PlayerInventory playerinventory)
     {
         return new ContainerChargingBench(playerinventory, this);
     }
+    */
 
     public boolean emitsEnergyTo(TileEntity tileentity, ic2.api.Direction direction)
     {

@@ -14,10 +14,16 @@ import net.minecraft.server.*;
 
 public class ContainerChargingBench extends ContainerIC2
 {
+    public TileEntityChargingBench tileentity;
+    public int energy;
+    public short maxInput;
+    public EntityHuman player;
 
-    public ContainerChargingBench(PlayerInventory playerinventory, TileEntityChargingBench tileentitychargingbench)
+    public ContainerChargingBench(EntityHuman player, TileEntityChargingBench tileentitychargingbench)
     {
-        super(playerinventory.player, tileentitychargingbench);
+        super(player, tileentitychargingbench);
+        PlayerInventory playerinventory = player.inventory;
+        this.player = player;
         tileentity = tileentitychargingbench;
         energy = 0;
         maxInput = 0;
@@ -101,8 +107,4 @@ public class ContainerChargingBench extends ContainerIC2
     {
         return tileentity.a(entityhuman);
     }
-
-    public TileEntityChargingBench tileentity;
-    public int energy;
-    public short maxInput;
 }

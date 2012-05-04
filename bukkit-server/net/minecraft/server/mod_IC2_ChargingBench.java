@@ -3,17 +3,13 @@ package net.minecraft.server;
 import forge.*;
 import ic2.api.Items;
 import ic2.platform.Platform;
-import ic2chargingbench.common.BlockChargingBench;
-import ic2chargingbench.common.ItemChargingBench;
-import ic2chargingbench.common.TileEntityChargingBench1;
-import ic2chargingbench.common.TileEntityChargingBench2;
-import ic2chargingbench.common.TileEntityChargingBench3;
+import ic2chargingbench.common.*;
 import java.io.File;
 import net.minecraft.server.Block;
 import net.minecraft.server.ItemStack;
 import net.minecraft.server.ModLoader;
 
-public class mod_IC2_ChargingBench extends NetworkMod {
+public class mod_IC2_ChargingBench extends NetworkMod implements IGuiHandler {
 
    public static Configuration config;
    public static int idBlockChargingBench;
@@ -33,6 +29,20 @@ public class mod_IC2_ChargingBench extends NetworkMod {
       } catch (Exception var1) {
          System.out.println("[ChargingBench] Error while trying to access configuration!");
          throw new RuntimeException(var1);
+      }
+   }
+
+/*
+* Returns a Container to be displayed to the user.
+* On the client side, this needs to return a instance of GuiScreen
+* On the server side, this needs to return a instance of Container <--
+*/
+   public Object getGuiElement(int ID, EntityHuman player, World world, int x, int y, int z) {
+      TileEntity tileentity = world.getTileEntity(x, y, z);
+      if(tileentity != null && (tileentity instanceof TileEntityChargingBench)) {
+         return new ContainerChargingBench(player, ((TileEntityChargingBench)tileentity));
+      } else {
+         return null;
       }
    }
 
