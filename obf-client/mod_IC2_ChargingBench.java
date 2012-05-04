@@ -1,12 +1,6 @@
 import forge.Configuration;
 import ic2.api.Items;
 import ic2.platform.Platform;
-import ic2chargingbench.common.BlockChargingBench;
-import ic2chargingbench.common.ItemChargingBench;
-import ic2chargingbench.common.TileEntityChargingBench1;
-import ic2chargingbench.common.TileEntityChargingBench2;
-import ic2chargingbench.common.TileEntityChargingBench3;
-import ic2chargingbench.platform.ChargingBenchMod;
 import java.io.File;
 
 public class mod_IC2_ChargingBench extends ChargingBenchMod {

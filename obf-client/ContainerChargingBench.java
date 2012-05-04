@@ -1,7 +1,5 @@
-package ic2chargingbench.common;
 
-import ic2.common.ContainerIC2;
-import ic2chargingbench.common.TileEntityChargingBench;
+import ic2.common.*;
 
 public class ContainerChargingBench extends ContainerIC2 {
 

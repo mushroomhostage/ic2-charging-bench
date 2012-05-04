@@ -1,6 +1,3 @@
-package ic2chargingbench.platform;
-
-import ic2chargingbench.common.TileEntityChargingBench;
 import org.lwjgl.opengl.GL11;
 
 public class GuiChargingBench extends gb {

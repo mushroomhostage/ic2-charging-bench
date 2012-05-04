@@ -1,5 +1,3 @@
-package ic2chargingbench.common;
-
 import ic2.platform.ItemBlockCommon;
 
 public class ItemChargingBench extends ItemBlockCommon {

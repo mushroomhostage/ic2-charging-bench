@@ -1,12 +1,6 @@
-package ic2chargingbench.common;
-
 import ic2.common.BlockMultiID;
 import ic2.common.TileEntityBlock;
 import ic2.platform.Platform;
-import ic2chargingbench.common.TileEntityChargingBench1;
-import ic2chargingbench.common.TileEntityChargingBench2;
-import ic2chargingbench.common.TileEntityChargingBench3;
-import ic2chargingbench.platform.ChargingBenchMod;
 import java.util.Random;
 
 public class BlockChargingBench extends BlockMultiID {

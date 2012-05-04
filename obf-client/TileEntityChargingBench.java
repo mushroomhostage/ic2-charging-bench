@@ -1,5 +1,3 @@
-package ic2chargingbench.common;
-
 import ic2.api.Direction;
 import ic2.api.ElectricItem;
 import ic2.api.IElectricItem;
@@ -8,7 +6,6 @@ import ic2.common.EnergyNet;
 import ic2.common.Ic2Items;
 import ic2.common.TileEntityElecMachine;
 import ic2.platform.Platform;
-import ic2chargingbench.common.ContainerChargingBench;
 
 public class TileEntityChargingBench extends TileEntityElecMachine implements IEnergySource {
 
