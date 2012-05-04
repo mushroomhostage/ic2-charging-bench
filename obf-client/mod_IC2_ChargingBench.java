@@ -23,7 +23,7 @@ public class mod_IC2_ChargingBench extends ChargingBenchMod {
    }
 
    public String getVersion() {
-      return "1.90-1";
+      return "1.95b";
    }
 
    static {
