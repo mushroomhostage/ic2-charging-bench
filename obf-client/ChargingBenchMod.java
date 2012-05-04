@@ -23,13 +23,17 @@ public abstract class ChargingBenchMod extends NetworkMod implements IGuiHandler
 
     public Object getGuiElement(int ID, yw player, xd world, int x, int y, int z)
     {
-        // IMPORTANT TODO
-        return null;
+        kw tileentity = world.b(x, y, z);       // getBlockTileEntity
+        if (tileentity != null && (tileentity instanceof TileEntityChargingBench)) {
+            return new GuiChargingBench(player, (TileEntityChargingBench)tileentity);
+        } else {
+            return null;
+        }
     }
 
     public static boolean launchGUI(yw entityplayer, kw te)
     {
-        ModLoader.openGUI(entityplayer, new GuiChargingBench(entityplayer.ap, (TileEntityChargingBench)te));
+        ModLoader.openGUI(entityplayer, new GuiChargingBench(entityplayer, (TileEntityChargingBench)te));
         return true;
     }
 
@@ -39,6 +43,6 @@ public abstract class ChargingBenchMod extends NetworkMod implements IGuiHandler
         if(player == null)
             return null;
         else
-            return new GuiChargingBench(player.ap, new TileEntityChargingBench(0));
+            return new GuiChargingBench(player, new TileEntityChargingBench(0));
     }
 }

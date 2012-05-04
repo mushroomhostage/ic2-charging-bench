@@ -3,10 +3,12 @@ import org.lwjgl.opengl.GL11;
 public class GuiChargingBench extends gb {
 
    public TileEntityChargingBench tileentity;
+   public yw player;
 
 
-   public GuiChargingBench(aak inventoryplayer, TileEntityChargingBench te) {
-      super(te.getGuiContainer(inventoryplayer));
+   public GuiChargingBench(yw player, TileEntityChargingBench te) {
+      super(te.getGuiContainer(player.ap)); 
+      this.player = player;
       this.tileentity = te;
    }
 
