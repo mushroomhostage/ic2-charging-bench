@@ -1,2 +1,2 @@
 #!/bin/sh
-zip -r mod_ic2chargingbench_client-1.2.5-r0.zip *.class ic2/
+zip -r mod_chargingbench-client-1.95b-1.2.5-r00.zip *.class ic2/
