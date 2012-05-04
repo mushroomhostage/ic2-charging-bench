@@ -14,6 +14,11 @@ public class BlockChargingBench extends BlockMultiID {
       return Platform.isSimulating()?ChargingBenchMod.launchGUI(entityplayer, world.b(i, j, k)):true;
    }
 
+   public kw u_() {
+    return getBlockEntity();
+   }
+
+
    public TileEntityBlock getBlockEntity(int meta) {
       switch(meta) {
       case 0:
