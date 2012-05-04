@@ -107,4 +107,14 @@ public class ContainerChargingBench extends ContainerIC2
     {
         return tileentity.a(entityhuman);
     }
+
+    public EntityHuman getPlayer()
+    {
+        return player;
+    }
+
+    public IInventory getInventory() 
+    {
+        return tileentity;
+    }
 }

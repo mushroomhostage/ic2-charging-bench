@@ -39,6 +39,7 @@ public class mod_IC2_ChargingBench extends NetworkMod implements IGuiHandler {
 */
    public Object getGuiElement(int ID, EntityHuman player, World world, int x, int y, int z) {
       TileEntity tileentity = world.getTileEntity(x, y, z);
+      System.out.println("getGuiElement te="+tileentity);
       if(tileentity != null && (tileentity instanceof TileEntityChargingBench)) {
          return new ContainerChargingBench(player, ((TileEntityChargingBench)tileentity));
       } else {
