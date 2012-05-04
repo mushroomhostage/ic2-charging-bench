@@ -3,7 +3,9 @@ import ic2.common.TileEntityBlock;
 import ic2.platform.Platform;
 import java.util.Random;
 
-public class BlockChargingBench extends BlockMultiID {
+import forge.*;
+
+public class BlockChargingBench extends BlockMultiID implements ITextureProvider {
 
    public BlockChargingBench(int id) {
       super(id, acn.d);
@@ -17,7 +19,6 @@ public class BlockChargingBench extends BlockMultiID {
    public kw u_() {
     return getBlockEntity();
    }
-
 
    public TileEntityBlock getBlockEntity(int meta) {
       switch(meta) {
