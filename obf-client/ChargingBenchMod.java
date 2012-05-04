@@ -23,6 +23,8 @@ public abstract class ChargingBenchMod extends NetworkMod implements IGuiHandler
 
     public Object getGuiElement(int ID, yw player, xd world, int x, int y, int z)
     {
+        // IMPORTANT TODO
+        return null;
     }
 
     public static boolean launchGUI(yw entityplayer, kw te)
