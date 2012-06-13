@@ -78,4 +78,10 @@ public class mod_IC2_ChargingBench extends NetworkMod implements IGuiHandler {
     {
             return false;
     }
+
+    @Override
+    public String getPriorities()
+    {
+        return "required-after:mod_IC2";
+    }
 }

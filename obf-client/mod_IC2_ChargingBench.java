@@ -41,4 +41,21 @@ public class mod_IC2_ChargingBench extends ChargingBenchMod {
          throw new RuntimeException(var1);
       }
    }
+    @Override
+    public boolean clientSideRequired()
+    {
+            return true;
+    }
+
+    @Override
+    public boolean serverSideRequired()
+    {
+            return false;
+    }
+
+    @Override
+    public String getPriorities()
+    {
+        return "required-after:mod_IC2";
+    }
 }
