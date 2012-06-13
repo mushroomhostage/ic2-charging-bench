@@ -17,6 +17,9 @@ public class mod_IC2_ChargingBench extends ChargingBenchMod {
       ModLoader.registerTileEntity(TileEntityChargingBench1.class, "Charging Bench Mk1");
       ModLoader.registerTileEntity(TileEntityChargingBench2.class, "Charging Bench Mk2");
       ModLoader.registerTileEntity(TileEntityChargingBench3.class, "Charging Bench Mk3");
+   }
+
+   public void modsLoaded() {
       ModLoader.addRecipe(new aan(blockChargingBench, 1, 0), new Object[]{"UUU", "W W", "WWW", Character.valueOf('U'), Items.getItem("copperCableItem"), Character.valueOf('W'), pb.x});
       ModLoader.addRecipe(new aan(blockChargingBench, 1, 1), new Object[]{"UUU", "WCW", "WWW", Character.valueOf('U'), Items.getItem("goldCableItem"), Character.valueOf('W'), pb.x, Character.valueOf('C'), Items.getItem("electronicCircuit")});
       ModLoader.addRecipe(new aan(blockChargingBench, 1, 2), new Object[]{"UUU", "WCW", "WWW", Character.valueOf('U'), Items.getItem("ironCableItem"), Character.valueOf('W'), pb.x, Character.valueOf('C'), Items.getItem("advancedCircuit")});

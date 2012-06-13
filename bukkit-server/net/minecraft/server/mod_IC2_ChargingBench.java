@@ -55,6 +55,9 @@ public class mod_IC2_ChargingBench extends NetworkMod implements IGuiHandler {
       ModLoader.registerTileEntity(TileEntityChargingBench1.class, "Charging Bench Mk1");
       ModLoader.registerTileEntity(TileEntityChargingBench2.class, "Charging Bench Mk2");
       ModLoader.registerTileEntity(TileEntityChargingBench3.class, "Charging Bench Mk3");
+  }
+
+  public void modsLoaded() {
       ModLoader.addRecipe(new ItemStack(blockChargingBench, 1, 0), new Object[]{"UUU", "W W", "WWW", Character.valueOf('U'), Items.getItem("copperCableItem"), Character.valueOf('W'), Block.WOOD});
       ModLoader.addRecipe(new ItemStack(blockChargingBench, 1, 1), new Object[]{"UUU", "WCW", "WWW", Character.valueOf('U'), Items.getItem("goldCableItem"), Character.valueOf('W'), Block.WOOD, Character.valueOf('C'), Items.getItem("electronicCircuit")});
       ModLoader.addRecipe(new ItemStack(blockChargingBench, 1, 2), new Object[]{"UUU", "WCW", "WWW", Character.valueOf('U'), Items.getItem("ironCableItem"), Character.valueOf('W'), Block.WOOD, Character.valueOf('C'), Items.getItem("advancedCircuit")});
@@ -63,4 +66,16 @@ public class mod_IC2_ChargingBench extends NetworkMod implements IGuiHandler {
    public String getVersion() {
       return "1.95b";
    }
+
+    @Override
+    public boolean clientSideRequired()
+    {
+            return true;
+    }
+
+    @Override
+    public boolean serverSideRequired()
+    {
+            return false;
+    }
 }
